@@ -1,0 +1,283 @@
+/* Importando a fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Resetando estilos padrão e configurando a caixa do modelo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+/* Estilizando a barra de rolagem no navegador webkit */
+::-webkit-scrollbar {
+    height: 0.1rem;
+    width: .5rem;
+}
+
+/* Estilizando a parte traseira da barra de rolagem */
+::-webkit-scrollbar-track {
+    background-color: #67ccff;
+}
+
+/* Estilizando o polegar da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    background-color: #194eb9;
+    border-radius: 5rem;
+}
+
+/* Estilos gerais do corpo da página */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #1d002c;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* Estilos do cabeçalho da página */
+header {
+    padding: 25px 10%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 1001;
+}
+
+/* Estilos do logotipo */
+.logo {
+    font-size: 2rem;
+    color: #12f7ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Estilos da lista de navegação no cabeçalho */
+ul.navlist {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos dos itens da lista de navegação */
+.navlist li {
+    margin-left: 1rem;
+}
+
+/* Estilos dos links da lista de navegação */
+.navlist li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 5px 12px;
+    border: 2px solid #12f7ff;
+    border-radius: 25px;
+    transition: all .3s ease;
+}
+
+/* Efeitos ao passar o mouse sobre os links da lista de navegação */
+.navlist li a:hover,
+.navlist li a:active {
+    box-shadow: 0 0 1rem #12f7ff;
+    background: #12f7ff;
+    color: #1d002c;
+}
+
+/* Estilos da seção principal da página */
+section {
+    min-height: 100vh;
+}
+
+/* Estilos da seção de paralaxe na página inicial */
+.parallax-home {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+/* Estilos da imagem de paralaxe na página inicial */
+.parallax-home img {
+    position: absolute;
+    /*object-fit: cover;*/
+    pointer-events: none;
+}
+
+/* Estilos do texto sobre a imagem de paralaxe na página inicial */
+.parallax-home #text {
+    position: absolute;
+    font-size: 2.5rem;
+    text-shadow: 0 10px 4px rgba(0,0,0,0.85);
+    top: 80%;
+    left: 3%;
+}
+
+/* Estilos da imagem da lua na página inicial */
+.parallax-home img#moon, .about img#desert-moon {
+    mix-blend-mode: screen;
+}
+
+/* Estilos da seção "about" */
+.about {
+    position: relative;
+}
+
+/* Estilos da imagem na seção "about" */
+.about img {
+    position: absolute;
+    z-index: 1000;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+/* Posicionamento específico da imagem na seção "about" */
+.about img.about-waterfall {
+    position: absolute;
+    top: -95px;
+}
+
+/* Estilos da caixa de informações na seção "about" */
+.about .info-box {
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    width: 50%;
+    z-index: 1003;
+    background: #1d002c;
+}
+
+/* Estilos do título na caixa de informações na seção "about" */
+.about .info-box h2 {
+    font-size: 2.5rem;
+}
+
+/* Estilos do texto na caixa de informações na seção "about" */
+.about .info-box p{
+    margin-bottom: 1.5rem;
+    margin-top: .5rem;
+}
+
+/* Estilos do botão na caixa de informações na seção "about" */
+.btn {
+    background: #12f7ff;
+    color: #1d002c;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: .5rem 1rem;
+    transition: all .3s ease;
+    border: 2px solid #12f7ff;
+    font-weight: 500;
+}
+
+/* Efeitos ao passar o mouse sobre o botão */
+.btn:hover {
+    box-shadow: 0 0 1rem #12f7ff;
+    background: #1d002c;
+    color: #12f7ff;
+}
+
+/* Estilos da seção de produtos */
+.Products {
+    background: #121137;
+    padding: 3rem 10%;
+}
+
+/* Estilos do título da seção de produtos */
+.Products h2 {
+    font-size: 2rem;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+/* Estilos dos cartões de produto */
+.product-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Estilos do cartão de produto individual */
+.card {
+    padding: 1rem;
+    border: 2px solid #12f7ff;
+    text-align: center;
+    border-radius: 25px;
+    display: block;
+    transition: all .4s ease;
+    z-index: 999;
+}
+
+/* Efeitos ao passar o mouse sobre o cartão de produto */
+.card:hover {
+    cursor: pointer;
+    transform: translate(-7px);
+}
+
+/* Estilos da imagem dentro do cartão de produto */
+.card img {
+    width: 150px;
+    height: 150px;
+    margin-top: -4rem;
+    filter: drop-shadow(0 0 0.5rem #1797ff);
+}
+
+/* Estilos do bloco de preço e nome dentro do cartão de produto */
+.card .price-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Estilos do bloco de informações dentro do cartão de produto */
+.info {
+    padding-bottom: .5rem;
+}
+
+/* Estilos do parágrafo dentro do bloco de informações */
+.info p {
+    padding: .5rem 0 1.
+}
+/* Estilos do botão dentro do bloco de informações */
+.info .btn {
+    display: block;
+    width: 60%;
+    margin: auto;
+}
+
+/* Estilos do span dentro do bloco de preço e nome */
+.price-name span {
+    color: #04cf37;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+#progress{
+    position: fixed;
+    /*background-color: #194eb9;*/
+    z-index: 1000;
+    bottom: 60px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    display: none;
+    place-items: center;
+    border-radius: 50%;
+    color: #1d002c;
+    cursor: pointer;
+}
+#progress-value{
+    display: block;
+    height: calc(100% - 12px);
+    width: calc(100% - 12px);
+    background: #fff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+}
